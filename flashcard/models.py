@@ -28,7 +28,7 @@ class Flashcard(models.Model):
             return 'flashcard-medio'
         elif self.dificuldade == 'D':
             return 'flashcard-dificil'
-
+    
 class FlashcardDesafio(models.Model):
     flashcard = models.ForeignKey(Flashcard, on_delete=models.DO_NOTHING)
     respondido = models.BooleanField(default=False)
