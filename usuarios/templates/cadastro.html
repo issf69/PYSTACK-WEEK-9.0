@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block 'cabecalho' %}
-    <link rel="stylesheet" href="{% static 'usuarios/css/cadastro.css' %}"
+    <link rel="stylesheet" href="{% static 'usuarios/css/cadastro.css' %}">
 {% endblock %}
 
 {% block 'conteudo' %}
@@ -45,7 +45,7 @@
                             {% endfor %}
                         {% endif %}
                         <form action="{% url 'cadastro' %}" method="POST">{% csrf_token %}
-                            <label>Username</label>
+                            <label>Digite seu Nome</label>
                             <input type="text" class="input-form" name="username" id="">
                             <br>
                             <br>
@@ -53,7 +53,7 @@
                             <input type="password" class="input-form" name="senha" id="">
                             <br>
                             <br>
-                            <label>Confirmar senha</label>
+                            <label>Confirme senha</label>
                             <input type="password" class="input-form" name="confirmar_senha" id="">
                             <br>
                             <br>

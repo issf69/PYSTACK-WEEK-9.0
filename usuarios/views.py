@@ -40,7 +40,7 @@ def cadastro(request):
 
 
 def logar(request):
-    if request.method =="GET":
+    if request.method == "GET":
         print(request.user)
         return render(request, 'login.html')
     elif request.method == "POST":

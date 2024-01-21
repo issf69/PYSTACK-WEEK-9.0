@@ -2,13 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
 class Categoria(models.Model):
     nome = models.CharField(max_length=20)
 
     def __str__(self):
         return self.nome
-
-
+    
 class Flashcard(models.Model):
     DIFICULDADE_CHOICES = (('D', 'Difícil'), ('M', 'Médio'), ('F', 'Fácil'))
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
@@ -19,14 +19,15 @@ class Flashcard(models.Model):
 
     def __str__(self):
         return self.pergunta
+    
     @property
     def css_dificuldade(self):
-        if self.dificuldade == "F":
-            return "flashcard-facil"
-        elif self.dificuldade == "M":
+        if self.dificuldade == 'F':
+            return 'flashcard-facil'
+        elif self.dificuldade == 'M':
             return 'flashcard-medio'
-        elif self.dificuldade == "D":
-            return "flashcard-dificil"
+        elif self.dificuldade == 'D':
+            return 'flashcard-dificil'
 
 class FlashcardDesafio(models.Model):
     flashcard = models.ForeignKey(Flashcard, on_delete=models.DO_NOTHING)
@@ -49,3 +50,10 @@ class Desafio(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    @property
+    def status(self):
+        flashcards_nao_respondidos = self.flashcards.filter(
+            respondido=False
+        ).count()
+        return 'Em aberto' if flashcards_nao_respondidos > 0 else 'Finalizado'
