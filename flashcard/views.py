@@ -177,3 +177,4 @@ def relatorio(request, id):
     # TODO:  Fazer o Ranking
 
     return render(request, 'relatorio.html', {'desafio': desafio, 'dados': dados, 'categorias': name_categoria, 'dados2': dados2})
+

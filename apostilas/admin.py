@@ -2,7 +2,5 @@ from django.contrib import admin
 from .models import Apostila, ViewApostila
 
 admin.site.register(Apostila)
-admin.site.register(ViewApostila
-)
+admin.site.register(ViewApostila)
 
-# Register your models here.

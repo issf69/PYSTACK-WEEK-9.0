@@ -5,7 +5,6 @@ from django.contrib.messages import constants
 from django.contrib import messages
 from django.contrib import auth
 
-# Create your views here.
 def cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
@@ -18,7 +17,7 @@ def cadastro(request):
             messages.add_message(request, constants.ERROR, 'Senha e confirmar senha não coincidem')
             return redirect('/usuarios/cadastro')
 
-        user =User.objects.filter(username=username)
+        user = User.objects.filter(username=username)
 
         if user.exists():
             messages.add_message(request, constants.ERROR, 'Usuário já existe')
@@ -31,13 +30,8 @@ def cadastro(request):
             )
             return redirect('/usuarios/login')
         except:
-            messages.add_message(request, constants.ERROR, 'Erro onterno do servidor')
+            messages.add_message(request, constants.ERROR, 'Erro interno do servidor')
             return redirect('/usuarios/cadastro')
-
-        def login(request):
-            if request.method == "GET":
-                return render(request, 'login.html')
-
 
 def logar(request):
     if request.method == "GET":
@@ -52,8 +46,8 @@ def logar(request):
 
         if user:
             auth.login(request, user)
-            messages.add_message(request, constants.SUCCESS, 'Logado!' )
-            return redirect('/flashcard/novo_flashcard')# vai dar erro ainda
+            messages.add_message(request, constants.SUCCESS, 'Logado!')
+            return redirect('/flashcard/novo_flashcard')
         else:
             messages.add_message(request, constants.ERROR, 'Username ou senha inválida')
             return redirect('/usuarios/logar')
@@ -61,5 +55,4 @@ def logar(request):
 def logout(request):
     auth.logout(request)
     return redirect('/usuarios/logar')
-    # Implementação da visualização de login
-    #return HttpResponse('Teste')
+
