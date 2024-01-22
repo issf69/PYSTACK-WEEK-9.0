@@ -63,7 +63,7 @@ Você pode visualizar 👀 👇 conteùdos completos através dos 🔗links abai
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT.
+Esse projeto ficará sob a licença MIT.
 
 ---
 
