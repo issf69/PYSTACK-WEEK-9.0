@@ -1,5 +1,15 @@
 <h1 align="center"> PYSTACK WEEK 9.0 </h1>
 
+<h1>
+    <p align="center">
+    <a href="https://pythonando.com.br/">
+     <img align="center" width="40px" src="https://pythonando.com.br/"></a>
+    <span> Créditos Deste Projeto para  </span>
+
+   [Pythonando](https://pythonando.com.br/)  para <a href="https://pythonando.com.br/">Caio Sampaio</a> e Todos que Contribuem</div>
+
+</h1>
+
 <p align="center">
 Programa exclusivo e gratuito, promovido pela Pythonando para ensino de tecnologias WEB.
 </p>
