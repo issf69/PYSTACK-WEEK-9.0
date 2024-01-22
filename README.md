@@ -3,7 +3,7 @@
 <h1>
     <p align="center">
     <a href="https://pythonando.com.br/">
-     <img align="center" width="40px" src="https://pythonando.com.br/"></a>
+     <img align="center" width="40px" src="https://hotmart.s3.amazonaws.com/product_pictures/2b02cf98-1f63-47c0-ac02-4ed4cb29bad4/logo_pythonando.png"></a>
     <span> Créditos Deste Projeto para  </span>
 
    [Pythonando](https://pythonando.com.br/)  para <a href="https://pythonando.com.br/">Caio Sampaio</a> e Todos que Contribuem</div>
