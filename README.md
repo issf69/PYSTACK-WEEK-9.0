@@ -67,6 +67,6 @@ Esse projeto ficará sob a licença MIT.
 
 ---
 
-Feito com ♥ by.Projeto de estudo da aluna Irene Silva França, feito através Plataforma Pythonando :wave: [Veja 👉 You Tube ](https://www.youtube.com/@pythonando)
+Feito com 😍 by.Projeto de estudo da aluna Irene Silva França, feito através Plataforma Pythonando :wave: [Veja 👉 You Tube ](https://www.youtube.com/@pythonando)
 
 
