@@ -53,13 +53,13 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://pythonan
 
 Você pode visualizar 👀 👇 conteùdos completos através dos 🔗links abaixo .
 
-🎥 [👀 icones](https://boxicons.com/)
+🕹️ [👀 icones](https://boxicons.com/)
 
-🎥 [👀 getbootstrap](https://getbootstrap.com/docs/4.0/components/alerts/)
+🕹️ [👀 getbootstrap](https://getbootstrap.com/docs/4.0/components/alerts/)
 
-🎥 [👀 Python](https://docs.python.org/pt-br/3/tutorial/index.html)
+🕹️ [👀 Python](https://docs.python.org/pt-br/3/tutorial/index.html)
 
-🎥 [👀 Django](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django)
+🕹️ [👀 Django](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django)
 
 ## :memo: Licença
 
