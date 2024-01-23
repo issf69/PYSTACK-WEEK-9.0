@@ -64,12 +64,11 @@ def novo_flashcard(request):
         return redirect('/flashcard/novo_flashcard')
 
 def deletar_flashcard(request, id):
+    #dica request.user
     # Fazer Validação de  Segurança
     flashcard = Flashcard.objects.get(id=id)
     flashcard.delete()
-    messages.add_message(
-        request, constants.SUCCESS, 'Flashcard deletado com sucesso!'
-    )
+    messages.add_message(request, constants.SUCCESS, 'Flashcard deletado com sucesso!')
     return redirect('/flashcard/novo_flashcard/')
 
 def iniciar_desafio(request):
@@ -92,18 +91,20 @@ def iniciar_desafio(request):
 
         desafio.save()
 
-        desafio.categoria.add(*categorias)
+        #desafio.categoria.add(*categorias)
+        for categoria in categorias:
+            desafio.categoria.add(categoria)
 
         flashcards = (Flashcard.objects.filter(user=request.user)
                     .filter(dificuldade=dificuldade)
-                    .filter(categoria__id__in=categorias)
+                    .filter(categoria_id__in=categorias)
                     .order_by('?')
                     )
 
         if flashcards.count() < int(qtd_perguntas):
             return redirect('/flashcard/iniciar_desafio')
             # Tratar para escolher depois.
-            # Se tiver menos flashcards do que a quantidade de perguntas vai dar erro, resolvam(resolvido)
+            #  foi feito)Se tiver menos flashcards do que a quantidade de perguntas vai dar erro, resolvam(resolvido)
 
         flashcards = flashcards[: int(qtd_perguntas)]
 
@@ -126,6 +127,7 @@ def listar_desafio(request):
 
 def desafio(request, id):
     desafio = Desafio.objects.get(id=id)
+    #VALIDAÇÃO DE SEGURANÇA
     if not desafio.user == request.user:
         raise Http404()
     if request.method == "GET":
@@ -138,7 +140,7 @@ def responder_flashcard(request, id):
     flashcard_desafio = FlashcardDesafio.objects.get(id=id)
     acertou = request.GET.get('acertou')
     desafio_id = request.GET.get('desafio_id')
-
+    #VALIDAÇAO DE SEGURANÇA
     if not flashcard_desafio.flashcard.user == request.user:
         raise Http404()
 
