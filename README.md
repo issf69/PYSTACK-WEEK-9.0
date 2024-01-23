@@ -9,6 +9,7 @@
    [Pythonando](https://pythonando.com.br/)  para <a href="https://pythonando.com.br/">Caio Sampaio</a> e Todos que Contribuem</div>
 
 </h1>
+
 <p align="center">
 Programa exclusivo e gratuito, promovido pela Pythonando para ensino de tecnologias WEB.
 </p>
@@ -48,15 +49,24 @@ O Pythonando é um evento gratuito para tenha um projeto incrível para seu port
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://pythonando.com.br/psw/inscricao/psw9.0).
 
+## 🔎 Fontes para pesquisa:  
 
 Você pode visualizar 👀 👇 conteùdos completos através dos 🔗links abaixo .
 
-🎥 [👀 icones](https://boxicons.com/)
+🕹️ [👀 icones](https://boxicons.com/)
 
-🎥 [👀 getbootstrap](https://getbootstrap.com/docs/4.0/components/alerts/)
+🕹️ [👀 getbootstrap](https://getbootstrap.com/docs/4.0/components/alerts/)
 
-🎥 [👀 Python](https://docs.python.org/pt-br/3/tutorial/index.html)
+🕹️ [👀 Python](https://docs.python.org/pt-br/3/tutorial/index.html)
 
-🎥 [👀 Django](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django)
+🕹️ [👀 Django](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django)
+
+## :memo: Licença
+
+Esse projeto ficará sob a licença MIT.
+
+---
+
+Feito com 😍 .Projeto de estudo da aluna Irene Silva França, feito através Plataforma Pythonando :wave: [Veja 👉 You Tube ](https://www.youtube.com/@pythonando)
 
 
