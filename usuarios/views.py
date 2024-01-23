@@ -26,9 +26,9 @@ def cadastro(request):
         try:
             User.objects.create_user(
                 username=username,
-                password=senha
+                password=senha,
             )
-            return redirect('/usuarios/login')
+            return redirect('/usuarios/logar')
         except:
             messages.add_message(request, constants.ERROR, 'Erro interno do servidor')
             return redirect('/usuarios/cadastro')

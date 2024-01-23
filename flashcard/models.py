@@ -8,7 +8,7 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nome
-    
+
 class Flashcard(models.Model):
     DIFICULDADE_CHOICES = (('D', 'Difícil'), ('M', 'Médio'), ('F', 'Fácil'))
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
@@ -19,7 +19,7 @@ class Flashcard(models.Model):
 
     def __str__(self):
         return self.pergunta
-    
+
     @property
     def css_dificuldade(self):
         if self.dificuldade == 'F':

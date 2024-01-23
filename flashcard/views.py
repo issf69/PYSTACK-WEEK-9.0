@@ -16,7 +16,7 @@ def novo_flashcard(request):
         flashcards = Flashcard.objects.filter(user=request.user)
 
         categoria_filtrar = request.GET.get('categoria')
-        dificuldade_filtrar = request.GET.get('dificuldade')
+        dificuldade_filtrar = request.GET.get("dificulfdade")
 
         if categoria_filtrar:
             flashcards = flashcards.filter(categoria__id=categoria_filtrar)
@@ -24,27 +24,30 @@ def novo_flashcard(request):
         if dificuldade_filtrar:
             flashcards = flashcards.filter(dificuldade=dificuldade_filtrar)
 
-        return render(
-            request,
-            'novo_flashcard.html',
-            {
-                'categorias': categorias,
-                'dificuldades': dificuldades,
-                'flashcards': flashcards,
-            }
-        )
-    elif request.method == 'POST':
+        return render(request,'novo_flashcard.html',{'categorias': categorias,'dificuldades': dificuldades,'flashcards': flashcards,})
+
+
+
+        '''flashcards = Flashcard.objects.filter(user=request.user)
+
+        categoria_filtrar = request.GET.get('categoria')
+        dificuldade_filtrar = request.GET.get('dificuldade')
+
+        if categoria_filtrar:
+            flashcards = flashcards.filter(categoria__id=categoria_filtrar)
+
+        if dificuldade_filtrar:
+            flashcards = flashcards.filter(dificuldade=dificuldade_filtrar)'''
+
+
+    elif request.method == "POST":
         pergunta = request.POST.get('pergunta')
         resposta = request.POST.get('resposta')
         categoria = request.POST.get('categoria')
         dificuldade = request.POST.get('dificuldade')
 
         if len(pergunta.strip()) == 0 or len(resposta.strip()) == 0:
-            messages.add_message(
-                request,
-                constants.ERROR,
-                'Preencha os campos de pergunta e resposta',
-            )
+            messages.add_message(request, constants.ERROR, "Preencha os campos de pergunta e resposta",)
             return redirect('/flashcard/novo_flashcard')
 
         flashcard = Flashcard(
@@ -57,7 +60,7 @@ def novo_flashcard(request):
 
         flashcard.save()
 
-        messages.add_message(request, constants.SUCCESS, 'Flashcard criado com sucesso')
+        messages.add_message(request, constants.SUCCESS, "Flashcard cadastrado com sucesso")
         return redirect('/flashcard/novo_flashcard')
 
 def deletar_flashcard(request, id):
@@ -92,10 +95,10 @@ def iniciar_desafio(request):
         desafio.categoria.add(*categorias)
 
         flashcards = (Flashcard.objects.filter(user=request.user)
-                      .filter(dificuldade=dificuldade)
-                      .filter(categoria__id__in=categorias)
-                      .order_by('?')
-                      )
+                    .filter(dificuldade=dificuldade)
+                    .filter(categoria__id__in=categorias)
+                    .order_by('?')
+                    )
 
         if flashcards.count() < int(qtd_perguntas):
             return redirect('/flashcard/iniciar_desafio')
