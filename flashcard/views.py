@@ -28,17 +28,6 @@ def novo_flashcard(request):
 
 
 
-        '''flashcards = Flashcard.objects.filter(user=request.user)
-
-        categoria_filtrar = request.GET.get('categoria')
-        dificuldade_filtrar = request.GET.get('dificuldade')
-
-        if categoria_filtrar:
-            flashcards = flashcards.filter(categoria__id=categoria_filtrar)
-
-        if dificuldade_filtrar:
-            flashcards = flashcards.filter(dificuldade=dificuldade_filtrar)'''
-
 
     elif request.method == "POST":
         pergunta = request.POST.get('pergunta')
