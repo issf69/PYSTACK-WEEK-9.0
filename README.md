@@ -47,7 +47,7 @@ O Pythonando é um evento gratuito para tenha um projeto incrível para seu port
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://pythonando.com.br/psw/inscricao/psw9.0).
+Você pode visualizar o layout do projeto através [DESSE LINK](https://plataforma.pythonando.com.br/).
 
 ## 🔎 Fontes para pesquisa:  
 
